@@ -242,4 +242,4 @@ We comply with all applicable laws when processing data requests.
 
 ---
 
-The latest version of this Privacy Policy is available at [insert link once hosted]. We encourage users to review it periodically.
+The latest version of this Privacy Policy is available at https://github.com/Rarpss/reps-weekly-legal/blob/main/privacy-policy.md We encourage users to review it periodically.
