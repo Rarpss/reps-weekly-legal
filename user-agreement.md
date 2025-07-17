@@ -220,4 +220,4 @@ Email [repsweekly@gmail.com](mailto:repsweekly@gmail.com) for support or to subm
 
 ---
 
-The latest version of this User Agreement is available at [insert link once hosted]. We encourage users to review it periodically.
+The latest version of this User Agreement is available at https://github.com/Rarpss/reps-weekly-legal/blob/main/user-agreement.md We encourage users to review it periodically.
