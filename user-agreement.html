@@ -31,7 +31,7 @@
 </head>
 <body>
   <h1>Reps Weekly User Agreement</h1>
-  <p><strong>Last Updated:</strong> August 26, 2025</p>
+  <p><strong>Last Updated:</strong> January 18, 2026</p>
 
   <p>This User Agreement (“Legal Terms”) is a legally binding contract between you (“you”) and Reps Weekly (“Company,” “we,” “us,” or “our”). By accessing or using any part of our mobile application or services (“Services”), you agree to be bound by these Legal Terms. If you do not agree, you are expressly prohibited from using the Services and must discontinue use immediately.</p>
 
@@ -59,14 +59,34 @@
   <h3>Platform Variability Disclaimer</h3>
   <p>Reps Weekly is available on both Android and iOS platforms. Please note that certain features, visual components, or performance characteristics may vary depending on device hardware and operating system limitations. We reserve the right to modify or update platform-specific functionality at any time without prior notice.</p>
 
+  <!-- ✅ NEW: Apple-specific terms (recommended for iOS distribution) -->
+  <h3>Apple iOS Terms</h3>
+  <p>If you access Reps Weekly on an iOS device, you acknowledge that:</p>
+  <ul>
+    <li>This agreement is between you and Reps Weekly, not Apple Inc.</li>
+    <li>Apple has no responsibility for the app, its content, or support services</li>
+    <li>Apple is not responsible for addressing claims related to the app, including product liability, regulatory compliance, or intellectual property</li>
+    <li>Apple and its subsidiaries are third-party beneficiaries of this agreement and may enforce its terms against you</li>
+  </ul>
+
   <h3>Advertising & Consent</h3>
   <p>Reps Weekly may display advertising provided by third-party services such as Google AdMob. These services may collect and process device-level data (such as advertising identifiers or usage metrics) to personalize and measure ad delivery. Advertising-related processing is conducted on the basis of your consent, which you may manage through platform settings such as Android’s ad personalization toggle or iOS’s tracking authorization prompts. These mechanisms allow you to control how advertising identifiers are used on your device.</p>
   <p>For more information, see our <a href="https://rarpss.github.io/reps-weekly-legal/privacy-policy.html#adConsent">Privacy Policy: Advertising & Consent</a>.</p>
 
-<h3>Push Notifications</h3>
-<p>Reps Weekly may schedule push notifications to support training consistency and user engagement. These notifications are stored locally on your device and are only delivered if you grant notification permissions. You may disable notifications at any time via your device settings.</p>
-<p>By using the app, you acknowledge that notification delivery depends on your device’s operating system and permission status. Reps Weekly is not liable for missed or delayed notifications due to permission denial, system throttling, or platform-specific restrictions.</p>
-  
+  <!-- ✅ NEW: Explicit remote config / feature gating clause -->
+  <h3>Remote Configuration & Feature Changes</h3>
+  <p>Reps Weekly may use remote configuration services (such as Firebase Remote Config) to modify, enable, disable, or adjust app features, limits, messaging, or behaviour without requiring an app update.</p>
+  <p>These changes may occur immediately and may affect app availability, functionality, or user experience. Continued use of the Services constitutes acceptance of such changes.</p>
+
+  <h3>Push Notifications</h3>
+  <p>Reps Weekly may schedule push notifications to support training consistency and user engagement. These notifications are stored locally on your device and are only delivered if you grant notification permissions. You may disable notifications at any time via your device settings.</p>
+  <p>By using the app, you acknowledge that notification delivery depends on your device’s operating system and permission status.</p>
+  <p>Reps Weekly is not responsible for missed, delayed, or undelivered notifications due to device settings, operating system limitations, background restrictions, network availability, or platform-level throttling.</p>
+
+  <!-- ✅ OPTIONAL: abuse enforcement clause (helpful if you ever gate/disable accounts/features) -->
+  <h3>Abuse Prevention & Enforcement</h3>
+  <p>We may use automated systems, configuration rules, or security services to detect abuse, misuse, or violations of these Terms. We reserve the right to restrict access, limit functionality, or disable accounts where suspicious or harmful activity is detected.</p>
+
   <h2>2. Intellectual Property Rights</h2>
   <h3>Ownership</h3>
   <p>We own or license all intellectual property contained in Reps Weekly, including:</p>
@@ -110,7 +130,8 @@
     <li>Legal non-compliance</li>
     <li>Harmful or prohibited behavior</li>
   </ul>
-    <h2>4. User Representations</h2>
+
+  <h2>4. User Representations</h2>
   <p>By using the Services, you represent and warrant that:</p>
   <ul>
     <li>You have the legal capacity and agree to these Legal Terms</li>
