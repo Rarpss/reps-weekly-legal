@@ -6,29 +6,52 @@
   <title>Delete My Reps Weekly Account</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: #f7f7f7;
       padding: 2rem;
-      max-width: 600px;
+      max-width: 720px;
       margin: auto;
+      color: #1f1f1f;
+      line-height: 1.6;
     }
-    h1 {
+    h1, h2 {
       color: #5D3FD3;
+      margin-top: 1.5rem;
     }
+    h1 { margin-top: 0; }
     .box {
       background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 1.75rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.08);
     }
     code {
       background: #eee;
-      padding: 2px 4px;
+      padding: 2px 6px;
       border-radius: 4px;
     }
     a {
       color: #5D3FD3;
       text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .note {
+      background: #f2efff;
+      border: 1px solid rgba(93, 63, 211, 0.25);
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .small {
+      font-size: 0.95rem;
+      color: #333;
+    }
+    ul { padding-left: 1.25rem; }
+    li { margin: 0.25rem 0; }
+    hr {
+      border: none;
+      border-top: 1px solid #e6e6e6;
+      margin: 1.5rem 0;
     }
   </style>
 </head>
@@ -37,27 +60,70 @@
     <h1>Request Account & Data Deletion</h1>
     <p>This page is provided by <strong>Reps Weekly</strong> to help users request deletion of their account and associated data.</p>
 
+    <div class="note">
+      <strong>Quick summary:</strong>
+      <ul>
+        <li>Email us from the email address linked to your Reps Weekly account (recommended).</li>
+        <li>We’ll confirm your request and then delete eligible data.</li>
+        <li>If information is missing, we’ll reply asking for what we need to verify ownership.</li>
+      </ul>
+    </div>
+
     <h2>How to Request Deletion</h2>
-    <p>Email our support team with the subject line:</p>
-    <p><strong><code>Delete My Account</code></strong></p>
-    <p>Include the following in your message:</p>
-    <ul>
-      <li>The email address associated with your Reps Weekly account</li>
-      <li>(Optional) Your UID from the app (visible in Profile screen)</li>
-    </ul>
-    <p>Send your request to: <strong><a href="mailto:repsweekly@gmail.com">repsweekly@gmail.com</a></strong></p>
+    <ol>
+      <li>Email our support team with the subject line: <strong><code>Delete My Account</code></strong></li>
+      <li>Include:
+        <ul>
+          <li>The email address associated with your Reps Weekly account</li>
+          <li>(Optional) Your UID from the app (if available in your Profile screen)</li>
+          <li>(Optional) A short note confirming you want your account deleted</li>
+        </ul>
+      </li>
+      <li>Send your request to: <strong><a href="mailto:repsweekly@gmail.com">repsweekly@gmail.com</a></strong></li>
+    </ol>
+
+    <div class="note small">
+      <strong>Verification:</strong> To protect users, we may need to verify ownership before processing deletion.
+      The fastest method is emailing us from the account’s registered email address.
+      If you no longer have access to that email, we may ask for additional information to confirm you own the account.
+    </div>
 
     <h2>What Gets Deleted</h2>
+    <p>When a valid deletion request is confirmed, we will delete (or de-identify where appropriate) account-related data such as:</p>
     <ul>
-     <li>Account credentials (e.g., email, authentication tokens)</li><li>Workout history including rep counts, timestamps, and session data</li>
-      <li>User ID (UID) and any device-linked identifiers</li><li>Progress tracking and performance metrics</li>
-      <li>Any cached in-app preferences or feature toggles tied to the account</li>
-    </ul><p><strong>Retention:</strong> Once your request is confirmed, all personal and workout data will be permanently deleted within 7 days. No data is kept beyond this period unless required by law (e.g., anonymized crash logs or fraud audit trails).</p>
+      <li>Account profile information (such as email associated with authentication)</li>
+      <li>Your user identifier (UID) and account records used to access the app</li>
+      <li>Workout history, including rep counts and timestamps stored against your account</li>
+      <li>Progress tracking and performance metrics stored against your account</li>
+      <li>Account-linked preferences or feature flags stored against your account</li>
+    </ul>
+
+    <h2>What May Be Retained</h2>
+    <p>Some information may be retained only as needed for legitimate purposes, such as:</p>
+    <ul>
+      <li>Emails you send to support (we may retain support communications for recordkeeping)</li>
+      <li>Security, fraud prevention, and abuse monitoring records (where required or reasonably necessary)</li>
+      <li>Aggregated or de-identified analytics that cannot reasonably be used to identify you</li>
+      <li>Data we are required to keep to comply with legal obligations</li>
+    </ul>
+
+    <h2>Timeframe</h2>
+    <p>
+      <strong>Target deletion timeframe:</strong> We aim to complete deletion within <strong>7 days</strong> after confirming your request.
+      In some cases (for example, if verification is required), processing may take longer.
+    </p>
+
+    <hr />
 
     <h2>Privacy Policy</h2>
-    <p>For full details on how your data is handled, please review our <a href="https://rarpss.github.io/reps-weekly-legal/privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
+    <p>
+      For full details on how data is handled, please review our
+      <a href="https://rarpss.github.io/reps-weekly-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+    </p>
 
-    <p><em>This page satisfies Google Play’s data deletion requirement for users without app access.</em></p>
+    <p class="small">
+      <em>This page is intended to satisfy app store requirements for providing an external method to request account and data deletion for users who may not be able to access the app.</em>
+    </p>
   </div>
 </body>
 </html>
