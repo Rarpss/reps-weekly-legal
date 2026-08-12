@@ -81,18 +81,19 @@
   <h1>Reps Weekly Privacy Policy</h1>
 
   <p>
-    <strong>Version:</strong> 2.4<br />
+    <strong>Version:</strong> 2.5<br />
     <strong>Last Updated:</strong>
-    <time datetime="2026-07-30">30 July 2026</time><br />
+    <time datetime="2026-08-11">11 August 2026</time><br />
     <strong>Effective Date:</strong>
-    <time datetime="2026-07-30">30 July 2026</time>
+    <time datetime="2026-08-11">11 August 2026</time>
   </p>
 
   <div class="summary">
     <p>
-      Reps Weekly is operated by <strong>Jackson Kemp</strong>, an individual
-      developer based in Victoria, Australia. “Reps Weekly” is the name of the
-      app and product; it is not the name of a company.
+      Reps Weekly is the product name used by its individual operator, who is
+      based in Victoria, Australia. “Reps Weekly” is not presently a separate
+      company or legal entity. In this Policy, “Reps Weekly”, “we”, “us” and
+      “our” refer to that operator.
     </p>
     <p>
       Privacy and support contact:
@@ -283,6 +284,8 @@
     <li>provide team membership, administration and leaderboard features;</li>
     <li>schedule local reminders requested by users;</li>
     <li>display and measure advertising;</li>
+    <li>understand app usage and improve features through privacy-controlled analytics;</li>
+    <li>identify crashes and uncaught errors and improve app stability;</li>
     <li>provide consent and advertising privacy controls;</li>
     <li>respond to support, privacy and account-deletion requests;</li>
     <li>review reports, enforce rules and reduce abuse;</li>
@@ -314,7 +317,7 @@
       team features you request;
     </li>
     <li>
-      <strong>Consent:</strong> where required for advertising, device storage,
+      <strong>Consent:</strong> where required for advertising, analytics, device storage,
       notifications or another optional activity;
     </li>
     <li>
@@ -365,6 +368,13 @@
   </p>
 
   <p>
+    UMP and Google Consent Mode are also used to communicate applicable
+    European analytics-storage choices. Advertising eligibility and Analytics
+    eligibility are evaluated separately: the fact that UMP permits an ad
+    request is not treated as permission to use Analytics.
+  </p>
+
+  <p>
     Where Google reports that a Privacy Options entry is required, an
     “Advertising privacy choices” entry is available in the app’s Settings.
     This can be used to review or change available choices. Other controls may
@@ -394,63 +404,94 @@
     </a>.
   </p>
 
-  <h2>7. Analytics, Diagnostics and App Messaging</h2>
+  <h2>7. Analytics, Crash Diagnostics and Operational Configuration</h2>
 
   <h3>7.1 Google Analytics for Firebase</h3>
 
   <p>
-    At the effective date of this Policy, the production Flutter app does not
-    intentionally integrate the Google Analytics for Firebase app SDK or log
-    custom Analytics events.
+    Reps Weekly uses Google Analytics for Firebase to understand how the app is
+    used and to improve features, reliability and the user experience. The app
+    records limited events for signup, login, onboarding completion or
+    skipping, workout completion, team creation or joining, and interval-timer
+    start or completion. The only intentional event parameter is the standard
+    signup-method value <code>email_password</code>.
   </p>
 
   <p>
-    Reps Weekly may introduce Google Analytics for Firebase in a future app
-    update to understand app opens, account creation, workout creation and
-    completion, team creation and joining, general feature use, navigation and
-    engagement. If activated, Analytics may process an app-instance identifier,
-    device and app metadata, approximate location and app-interaction events.
+    Reps Weekly does not set a Firebase Authentication UID as an Analytics
+    User-ID, does not create custom Analytics user properties, and does not
+    intentionally include email addresses, usernames, team identifiers or
+    codes, exercise names, workout contents, repetition counts, targets,
+    difficulty, interval duration, report or integrity-event content, free text
+    or other user-generated fitness content in Analytics events.
   </p>
 
   <p>
-    Reps Weekly does not intend to place usernames, email addresses, private
-    team content, complete workout contents, player-report details, bug-report
-    text or integrity-event details in Analytics events or user properties.
-    Store disclosures and applicable consent/configuration will be reviewed
-    before Analytics is activated.
-  </p>
-
-  <h3>7.2 Crash reporting and performance monitoring</h3>
-
-  <p>
-    Reps Weekly does not currently integrate Firebase Crashlytics or Firebase
-    Performance Monitoring as app-level production services. Device platforms,
-    app stores and other providers may process their own diagnostics according
-    to their settings and policies.
+    The Analytics SDK may automatically process technical and usage information
+    needed to provide Analytics, including app-instance or installation
+    identifiers, app version, device and operating-system information, language,
+    session and interaction information, and coarse geographic information
+    derived from network information. Advertising identifiers may be processed
+    where available, permitted and configured by Google and the device
+    platform. Reps Weekly does not request precise GPS location for Analytics.
   </p>
 
   <p>
-    If an app-level crash-reporting or performance service is introduced later,
-    this Policy and applicable store disclosures will be updated. Reps Weekly
-    does not intend to attach usernames, workout contents, team content,
-    reports or integrity content to crash-reporting custom fields.
+    Analytics collection starts disabled. For users to whom the applicable
+    European consent requirement does not apply, UMP may report that consent is
+    not required and Analytics is then enabled automatically. Where consent is
+    required, Analytics remains disabled until UMP and Consent Mode report that
+    <code>analytics_storage</code> is granted; denial or later revocation keeps
+    or makes it disabled. There is no general in-app Analytics opt-out outside
+    those applicable consent choices. Advertising consent and Analytics consent
+    are separate, and <code>canRequestAds()</code> is not used as Analytics
+    permission.
   </p>
 
-  <h3>7.3 Remote Config and In-App Messaging</h3>
+  <p>
+    Learn more in Google’s
+    <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+    <a href="https://firebase.google.com/support/privacy">Firebase privacy and security information</a>.
+  </p>
+
+  <h3>7.2 Firebase Crashlytics</h3>
+
+  <p>
+    Reps Weekly uses Firebase Crashlytics in release builds to identify crashes,
+    Flutter fatal errors and uncaught asynchronous errors and to improve app
+    stability. Crashlytics may automatically process crash stack traces,
+    exception information, crash time and application state, app identifier and
+    version, operating-system and device information, Crashlytics installation
+    UUIDs, Firebase installation IDs, session identifiers and related technical
+    diagnostics.
+  </p>
+
+  <p>
+    Reps Weekly does not intentionally assign a Firebase Authentication UID,
+    email address or username as the Crashlytics user ID, and does not
+    intentionally attach workout contents, team information, reports,
+    integrity-event content or other user-generated content through custom
+    Crashlytics keys or logs. An exception message or platform crash report may
+    nevertheless contain technical values produced by the app or operating
+    system, so diagnostic collection cannot be described as completely
+    anonymous.
+  </p>
+
+  <p>
+    Google currently states that Crashlytics keeps crash stack traces and
+    associated installation identifiers for 90 days before beginning removal
+    from live and backup systems. Google controls that service-level process.
+  </p>
+
+  <h3>7.3 Remote Config</h3>
 
   <p>
     Firebase Remote Config is used to fetch operational configuration such as
     maintenance status, maintenance messaging and minimum supported app build.
+    Remote Config uses Firebase installation identifiers to return configuration
+    values. Reps Weekly uses local notifications and does not use Firebase Cloud
+    Messaging as a remote-push communication channel.
   </p>
-
-  <p>
-    The app also includes the Firebase In-App Messaging SDK and enables its
-    automatic data collection. Even when no visible messaging campaign is
-    active, Firebase may process installation, registration and service
-    metadata needed to provide that SDK. Reps Weekly does not use this service
-    as a remote push-notification system.
-  </p>
-
   <h2>8. Service Providers and Disclosures</h2>
 
   <p>Information may be processed by:</p>
@@ -459,11 +500,15 @@
     <li>
       <strong>Google Firebase:</strong> Authentication, Cloud Firestore,
       Realtime Database, Remote Config, App Check, Firebase installations and
-      In-App Messaging;
+      Crashlytics;
+    </li>
+    <li>
+      <strong>Google Analytics:</strong> limited app-usage measurement and
+      feature-improvement analytics when collection is enabled;
     </li>
     <li>
       <strong>Google AdMob and UMP:</strong> advertising, advertising consent,
-      privacy messages and measurement;
+      privacy messages and ad measurement;
     </li>
     <li>
       <strong>Google/Gmail:</strong> support and privacy-request emails;
@@ -495,7 +540,7 @@
   <h2>9. International Processing</h2>
 
   <p>
-    Jackson Kemp’s ordinary authorised production access is from Australia.
+    Ordinary authorised production access by the operator is from Australia.
     Service providers operate internationally.
   </p>
 
@@ -504,7 +549,7 @@
     Australia’s <code>australia-southeast1</code> region and Realtime Database
     configured in the United States’ <code>us-central1</code> region. Firebase
     Authentication is operated by Google from the United States. Remote Config,
-    App Check, In-App Messaging, AdMob, Gmail and other provider service data
+    App Check, Crashlytics, Analytics, AdMob, UMP, Gmail and other provider data
     may be processed in countries where Google, Apple or their service
     providers operate.
   </p>
@@ -641,11 +686,15 @@
         </td>
       </tr>
       <tr>
-        <td>Analytics and provider metadata</td>
+        <td>Analytics, Crashlytics and provider metadata</td>
         <td>
-          Controlled partly by Google, Apple and applicable provider settings
-          and retention policies. Reps Weekly will configure available
-          retention controls where applicable.
+          Google controls service-level processing and retention. Google
+          Analytics permits a 2- or 14-month user/event retention setting, but
+          that setting does not remove data from standard aggregated reports.
+          Crashlytics currently keeps crash reports and associated installation
+          identifiers for 90 days before beginning removal. Account deletion in
+          Reps Weekly does not automatically identify or erase every provider
+          record that is not linked to the Firebase Authentication UID.
         </td>
       </tr>
       <tr>
@@ -710,6 +759,15 @@
     removal or pseudonymisation by email. We will assess whether it is legally,
     technically and operationally possible without unreasonably damaging
     legitimate historical records or the rights of others.
+  </p>
+
+  <p>
+    Analytics and Crashlytics records use app, installation, session and other
+    technical identifiers rather than an intentionally assigned account UID.
+    Deleting a Reps Weekly account therefore does not automatically locate or
+    erase every record already held in those provider systems. Those records
+    remain subject to applicable consent choices, Google’s controls, retention
+    settings and deletion processes.
   </p>
 
   <p>
@@ -803,7 +861,7 @@
   <p>
     Automated profanity filtering may be used for usernames and team names.
     Player reports, reported conduct and integrity events are ultimately
-    reviewed manually by Jackson Kemp.
+    reviewed manually by the operator.
   </p>
 
   <p>
@@ -856,7 +914,7 @@
     Reps Weekly uses safeguards such as Firebase Authentication, Firestore
     Security Rules, restricted administrative access, encrypted provider
     transport, Firebase App Check integration and limited data fields. Access
-    to production administration is intended to be limited to Jackson Kemp.
+    to production administration is intended to be limited to the operator.
   </p>
 
   <p>
@@ -918,7 +976,7 @@
   <h2>22. Contact and Complaints</h2>
 
   <p>
-    <strong>Operator:</strong> Jackson Kemp, individual developer<br />
+    <strong>Operator:</strong> Reps Weekly’s individual operator<br />
     <strong>Product:</strong> Reps Weekly<br />
     <strong>Location:</strong> Victoria, Australia<br />
     <strong>Email:</strong>
@@ -930,6 +988,8 @@
     <a href="https://rarpss.github.io/reps-weekly-legal/privacy-policy.html">
       https://rarpss.github.io/reps-weekly-legal/privacy-policy.html
     </a>.
+    Related pages: <a href="https://rarpss.github.io/reps-weekly-legal/user-agreement.html">User Agreement</a> and
+    <a href="https://rarpss.github.io/reps-weekly-legal/delete_request.html">Account and Data Deletion</a>.
   </p>
 </body>
 </html>
